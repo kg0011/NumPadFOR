@@ -1,8 +1,10 @@
 //Global Variables
 int appWidth, appHeight; //CAUTION: decimals are truncated in ints, not floats or doubles
 float widthSquare, heightSquare;
-float x0, x1, x2;
-float y0, y1, y2, y3, y4;
+int numPadColumns = 3;
+float[] x = new float [numPadColumns];
+int numPadRow = 5;
+float[] y = new float [numPadRow];
 //
 void setup () {
   size (600, 800);
@@ -12,6 +14,16 @@ appHeight = height;
 //Population of rect() variables
 widthSquare = 100;
 heightSquare = 100;
+for (int i=0; i<numPadColumns; i++ ) {
+  for ( int j=1; j<numPadRow; j+=2 ) { //j=j+2
+  if() x[i] = widthSquare*j/2;
+  y[i] = widthSquare*5/2;
+    }
+  }
+  printArray(x);
+  printArray(y);
+  x[i] = widthSquare = 50;
+} //End FOR
 x0 = 150;
 x1 = 250;
 x2 = 350;

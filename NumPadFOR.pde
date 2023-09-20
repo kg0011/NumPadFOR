@@ -14,16 +14,21 @@ appHeight = height;
 //Population of rect() variables
 widthSquare = 100;
 heightSquare = 100;
+//Error with PrintArray, Fix
 for (int i=0; i<numPadColumns; i++ ) {
-  for ( int j=1; j<numPadRow; j+=2 ) { //j=j+2
-  if() x[i] = widthSquare*j/2;
-  y[i] = widthSquare*5/2;
-    }
-  }
+  x[i] = widthSquare*(2*i+1)/2;
+  println( "Inside x", x[i] );
+} //End FOR
+  for ( int i=0; i<numPadRow; i++ ) {
+  y[i] = widthSquare*(2*i+5)/2;
+  println( "Inside y", y[i] );
+  } //End FOR
+  //
+  //if(i<numPadColumns)
+  //
   printArray(x);
   printArray(y);
-  x[i] = widthSquare = 50;
-} //End FOR
+  /*
 x0 = 150;
 x1 = 250;
 x2 = 350;
@@ -32,12 +37,19 @@ y1 = 400;
 y2 = 500;
 y3 = 600;
 y4 = 700;
-//
+*/
 //Nested FOR, reading rect() arrays
 //
 } //End setup
 //
 void draw() {
+  for( int i=0; i<numPadColumns; i++ ) {
+    for( int j=0; j<numPadRow-1; j++ ) {
+      rect(x[i], y[j], widthSquare, heightSquare);
+    } //End FOR
+  } //End FOR
+  
+  /*
 rect(x0, y0, widthSquare, heightSquare);
 rect(x0, y1, widthSquare, heightSquare);
 rect(x0, y2, widthSquare, heightSquare);
@@ -50,33 +62,23 @@ rect(x2, y0, widthSquare, heightSquare);
 rect(x2, y1, widthSquare, heightSquare);
 rect(x2, y2, widthSquare, heightSquare);
 rect(x2, y3, widthSquare, heightSquare);
+*/
 } //End draw
 //
 void mousePressed() {
-  //Row 1 of squares
   //
-  if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y0 && mouseY<y0+widthSquare ) println("1");
-  if ( mouseX>x1 && mouseX<x1+widthSquare && mouseY>y0 && mouseY<y0+widthSquare ) println("2");
-  if ( mouseX>x2 && mouseX<x2+widthSquare && mouseY>y0 && mouseY<y0+widthSquare ) println("3");
+  //Creating Number Pad Buttons
+  //Basic if key variables: mouseX> && mouseX< && mouseY> && mouseY<
+  //First rect variables: x0, y0, widthSquare, heightSquare
+  //if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y0 && mouseY<y0+widthSquare ) println("1");
+  //Caution: finish mousePressing when arrays can be read
+  for(int i=0; i<1; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1);
+  } //End FOR
+  //Caution: fix for rest of buttons
+  //Hint: construct all the single line IFs
   //
-  //Row 2 of squares
-  //
-  if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y1 && mouseY<y1+widthSquare ) println("4");
-  if ( mouseX>x1 && mouseX<x1+widthSquare && mouseY>y1 && mouseY<y1+widthSquare ) println("5");
-  if ( mouseX>x2 && mouseX<x2+widthSquare && mouseY>y1 && mouseY<y1+widthSquare ) println("6");
-  //
-  //Row 3 of squares
-  //
-  if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y2 && mouseY<y2+widthSquare ) println("7");
-  if ( mouseX>x1 && mouseX<x1+widthSquare && mouseY>y2 && mouseY<y2+widthSquare ) println("8");
-  if ( mouseX>x2 && mouseX<x2+widthSquare && mouseY>y2 && mouseY<y2+widthSquare ) println("9");
-  //
-  //Row 4 of squares
-  //
-  if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y3 && mouseY<y3+widthSquare ) println("10");
-  if ( mouseX>x1 && mouseX<x1+widthSquare && mouseY>y3 && mouseY<y3+widthSquare ) println("11");
-  if ( mouseX>x2 && mouseX<x2+widthSquare && mouseY>y3 && mouseY<y3+widthSquare ) println("12");
-  //
+  
 } //End mousepressed
 //
 void keyPressed() {

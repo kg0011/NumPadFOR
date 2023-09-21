@@ -72,8 +72,57 @@ void mousePressed() {
   //First rect variables: x0, y0, widthSquare, heightSquare
   //if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y0 && mouseY<y0+widthSquare ) println("1");
   //Caution: finish mousePressing when arrays can be read
+  //
+  //Row 1 of buttons
   for(int i=0; i<1; i++) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1);
+  } //End FOR
+  //
+  for(int i=1; i<2; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+1);
+  } //End FOR
+  //
+  for(int i=2; i<3; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-2] && mouseY<y[i-2]+widthSquare ) println("Button #:", i+1);
+  } //End FOR
+  //
+  //Row 2 of buttons
+  for(int i=0; i<1; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+4);
+  } //End FOR
+  //
+  for(int i=1; i<2; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+4);
+  } //End FOR
+  //
+  for(int i=2; i<3; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+4);
+  } //End FOR
+  //
+  //Row 3 of buttons
+  for(int i=0; i<1; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+2] && mouseY<y[i+2]+widthSquare ) println("Button #:", i+7);
+  } //End FOR
+  //
+  for(int i=1; i<2; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+7);
+  } //End FOR
+  //
+  for(int i=2; i<3; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+7);
+  } //End FOR
+  //
+  //Row 4 of buttons
+  for(int i=0; i<1; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+3] && mouseY<y[i+3]+widthSquare ) println("Button #:", i+10);
+  } //End FOR
+  //
+  for(int i=1; i<2; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+2] && mouseY<y[i+2]+widthSquare ) println("Button #:", i+10);
+  } //End FOR
+  //
+  for(int i=2; i<3; i++) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+10);
   } //End FOR
   //Caution: fix for rest of buttons
   //Hint: construct all the single line IFs

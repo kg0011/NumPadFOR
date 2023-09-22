@@ -12,11 +12,11 @@ appWidth = width;
 appHeight = height;
 //
 //Population of rect() variables
-widthSquare = 100;
-heightSquare = 100;
+widthSquare = 115;
+heightSquare = 115;
 //Error with PrintArray, Fix
 for (int i=0; i<numPadColumns; i++ ) {
-  x[i] = widthSquare*(2*i+1)/2;
+  x[i] = widthSquare*(2*i+2.2)/2;
   println( "Inside x", x[i] );
 } //End FOR
   for ( int i=0; i<numPadRow; i++ ) {

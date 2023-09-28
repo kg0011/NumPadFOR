@@ -5,6 +5,7 @@ int numPadColumns = 3;
 float[] x = new float [numPadColumns];
 int numPadRow = 5;
 float[] y = new float [numPadRow];
+float border=0.0;
 //
 void setup () {
   size (600, 800);
@@ -12,22 +13,17 @@ appWidth = width;
 appHeight = height;
 //
 //Population of rect() variables
-widthSquare = 115;
-heightSquare = 115;
-//Error with PrintArray, Fix
-for (int i=0; i<numPadColumns; i++ ) {
-  x[i] = widthSquare*(2*i+2.2)/2;
-  println( "Inside x", x[i] );
-} //End FOR
-  for ( int i=0; i<numPadRow; i++ ) {
-  y[i] = widthSquare*(2*i+5)/2;
-  println( "Inside y", y[i] );
-  } //End FOR
-  //
-  //if(i<numPadColumns)
-  //
-  printArray(x);
-  printArray(y);
+widthSquare = appWidth*1/4;
+heightSquare = widthSquare;
+if ( widthSquare*8 <= appHeight ) {
+println("true");
+//Empty IF
+} else {
+println("false");
+widthSquare = appHeight*1/8;
+border = appWidth - (widthSquare*1/2 + widthSquare*3 + widthSquare*1/2 );
+border = border*1/2; //using one variable saves system resources
+} //End height chck error
   /*
 x0 = 150;
 x1 = 250;
@@ -38,9 +34,27 @@ y2 = 500;
 y3 = 600;
 y4 = 700;
 */
-//Nested FOR, reading rect() arrays
-//
+/*Separate FOR loops
+for (int i=0; i<numPadColumns; i++ ) { //i stops for x not y
+  x[i] = widthSquare*(2*i+2.2)/2;
+  println( "Inside x", x[i] );
+} //End FOR
+  for ( int i=0; i<numPadRow; i++ ) {
+  y[i] = widthSquare*(2*i+5)/2;
+  println( "Inside y", y[i] );
+  } //End FOR
+  */
+  //combined for loops
+  for ( int i=0; i<numPadRow; i++ ) {
+  if ( i<numPadColumns ) x[i] = writeCoordinate(i, 1);
+  y[i] = writeCoordinate(i, 5);
+  } //End FOR
+  //printArray(x);
+  //printArray(y);
 } //End setup
+float writeCoordinate (int i, int oddStart) {
+return border + ( widthSquare*(2*i+oddStart)/2 );
+}
 //
 void draw() {
   for( int i=0; i<numPadColumns; i++ ) {
@@ -48,8 +62,7 @@ void draw() {
       rect(x[i], y[j], widthSquare, heightSquare);
     } //End FOR
   } //End FOR
-  
-  /*
+  /* Primitive variables in drawing rect()s
 rect(x0, y0, widthSquare, heightSquare);
 rect(x0, y1, widthSquare, heightSquare);
 rect(x0, y2, widthSquare, heightSquare);
@@ -72,6 +85,14 @@ void mousePressed() {
   //First rect variables: x0, y0, widthSquare, heightSquare
   //if ( mouseX>x0 && mouseX<x0+widthSquare && mouseY>y0 && mouseY<y0+widthSquare ) println("1");
   //Caution: finish mousePressing when arrays can be read
+  //
+  int buttonCounter = 1;
+  for ( int i=0; i<numPadColumns; i++ ) {
+   for ( int j=0; j<numPadRow; j++ ) {
+    println(i, j);
+    buttonCounter++;
+   }
+  }
   //
   //Row 1 of buttons
   for(int i=0; i<1; i++) {

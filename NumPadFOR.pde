@@ -118,6 +118,55 @@ void keyPressed() {
   if (key == 'q' || key == 'Q') {
   exit();
   } //end if
+  //
+  if (key == '1' || key == '!') {
+  println("Button #: 1"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '2' || key == '@') {
+  println("Button #: 2"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '3' || key == '#') {
+  println("Button #: 3"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '4' || key == '$') {
+  println("Button #: 4"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '5' || key == '%') {
+  println("Button #: 5"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '6' || key == '^') {
+  println("Button #: 6"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '7' || key == '&') {
+  println("Button #: 7"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '8' || key == '*') {
+  println("Button #: 8"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '9' || key == '(') {
+  println("Button #: 9"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '0' || key == ')') {
+  println("Button #: 10"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '-' || key == '_') {
+  println("Button #: 11"); //change if this can't be used for functionallity
+  }// end if
+  //
+  if (key == '=' || key == '+') {
+  println("Button #: 12"); //change if this can't be used for functionallity
+  }// end if
+  //
 } //End keypressed
 //
 //End MAIN Program

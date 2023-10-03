@@ -1,16 +1,8 @@
 //Global Variables
-int appWidth, appHeight; //CAUTION: decimals are truncated in ints, not floats or doubles
-float widthSquare, heightSquare;
-int numPadColumns = 3;
-float[] x = new float [numPadColumns];
-int numPadRow = 5;
-float[] y = new float [numPadRow];
-float border=0.0;
+
 //
 void setup () {
   size (600, 800);
-appWidth = width;
-appHeight = height;
 //
 //Population of rect() variables
 widthSquare = appWidth*1/4;

@@ -1,12 +1,12 @@
-//Global Variables
-
-//
 void setup () {
   size (600, 800);
+  display();
+  population();
+  textSetup();
 //
 //Population of rect() variables
 widthSquare = appWidth*1/4;
-heightSquare = widthSquare;
+heightSquare = widthSquare*1/2;
 if ( widthSquare*8 <= appHeight ) {
 println("true");
 //Empty IF
@@ -16,26 +16,6 @@ widthSquare = appHeight*1/8;
 border = appWidth - (widthSquare*1/2 + widthSquare*3 + widthSquare*1/2 );
 border = border*1/2; //using one variable saves system resources
 } //End height chck error
-  /*
-x0 = 150;
-x1 = 250;
-x2 = 350;
-y0 = 300;
-y1 = 400;
-y2 = 500;
-y3 = 600;
-y4 = 700;
-*/
-/*Separate FOR loops
-for (int i=0; i<numPadColumns; i++ ) { //i stops for x not y
-  x[i] = widthSquare*(2*i+2.2)/2;
-  println( "Inside x", x[i] );
-} //End FOR
-  for ( int i=0; i<numPadRow; i++ ) {
-  y[i] = widthSquare*(2*i+5)/2;
-  println( "Inside y", y[i] );
-  } //End FOR
-  */
   //combined for loops
   for ( int i=0; i<numPadRow; i++ ) {
   if ( i<numPadColumns ) x[i] = writeCoordinate(i, 1);
@@ -49,25 +29,13 @@ return border + ( widthSquare*(2*i+oddStart)/2 );
 }
 //
 void draw() {
+  textDraw();
+  //
   for( int i=0; i<numPadColumns; i++ ) {
     for( int j=0; j<numPadRow-1; j++ ) {
       rect(x[i], y[j], widthSquare, heightSquare);
     } //End FOR
   } //End FOR
-  /* Primitive variables in drawing rect()s
-rect(x0, y0, widthSquare, heightSquare);
-rect(x0, y1, widthSquare, heightSquare);
-rect(x0, y2, widthSquare, heightSquare);
-rect(x0, y3, widthSquare, heightSquare);
-rect(x1, y0, widthSquare, heightSquare);
-rect(x1, y1, widthSquare, heightSquare);
-rect(x1, y2, widthSquare, heightSquare);
-rect(x1, y3, widthSquare, heightSquare);
-rect(x2, y0, widthSquare, heightSquare);
-rect(x2, y1, widthSquare, heightSquare);
-rect(x2, y2, widthSquare, heightSquare);
-rect(x2, y3, widthSquare, heightSquare);
-*/
 } //End draw
 //
 void mousePressed() {
@@ -83,8 +51,8 @@ void mousePressed() {
    for ( int j=0; j<numPadRow; j++ ) {
     println(i, j);
     buttonCounter++;
-   }
-  }
+   } //end for
+  } //end for
   //
   //Row 1 of buttons
   for(int i=0; i<1; i++) {
@@ -146,6 +114,10 @@ void mousePressed() {
 void keyPressed() {
   //try coding keys for features, pressing number keys for printl lines
   //may need it's own tab if it does not work in this one
+  //
+  if (key == 'q' || key == 'Q') {
+  exit();
+  } //end if
 } //End keypressed
 //
 //End MAIN Program

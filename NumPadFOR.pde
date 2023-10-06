@@ -4,6 +4,8 @@ void setup () {
   population();
   textSetup();
 //
+  one = 0;
+//
 //Population of rect() variables
 widthSquare = appWidth*1/4;
 heightSquare = widthSquare*1/2;
@@ -31,6 +33,14 @@ return border + ( widthSquare*(2*i+oddStart)/2 );
 void draw() {
   textDraw();
   //
+  //
+  //
+  counter++;
+  //
+  if ( counter%60 == 0 ) println(one--);
+  //
+  //
+  //
   for( int i=0; i<numPadColumns; i++ ) {
     for( int j=0; j<numPadRow-1; j++ ) {
       rect(x[i], y[j], widthSquare, heightSquare);
@@ -53,6 +63,12 @@ void mousePressed() {
     buttonCounter++;
    } //end for
   } //end for
+  //
+  //
+  //
+  //*****put code for when a specific number button is pressed, the counter code will increase by that number*****
+  //
+  //
   //
   //Row 1 of buttons
   for(int i=0; i<1; i++) {

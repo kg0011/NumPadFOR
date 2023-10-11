@@ -35,9 +35,6 @@ void draw() {
   //
   //
   //
-  counter++;
-  //
-  if ( counter%60 == 0 ) println(one--);
   //
   //
   //
@@ -61,6 +58,8 @@ void mousePressed() {
    for ( int j=0; j<numPadRow; j++ ) {
     println(i, j);
     buttonCounter++;
+    text( red=#FF0000, i, j);
+    textDraw();
    } //end for
   } //end for
   //
@@ -73,7 +72,8 @@ void mousePressed() {
   //Row 1 of buttons
   for(int i=0; i<1; i++) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1);
-  } //End FOR
+    //if(  ); // (Boolean i=1 && j=1;)--->   **************make code that will allow x and y values to be put into text in the TextCode tab
+} //End FOR
   //
   for(int i=1; i<2; i++) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+1);

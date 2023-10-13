@@ -63,6 +63,9 @@ void mousePressed() {
    } //end for
   } //end for
   //
+  for (int i=1) {
+  if( mouseX=x[i] && mouseX=x[i]+widthSquare );
+  }
   //
   //
   //*****put code for when a specific number button is pressed, the counter code will increase by that number*****

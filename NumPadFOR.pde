@@ -58,14 +58,11 @@ void mousePressed() {
    for ( int j=0; j<numPadRow; j++ ) {
     println(i, j);
     buttonCounter++;
-    text( red=#FF0000, i, j);
+    //text( red=#FF0000, i, j );
     textDraw();
    } //end for
   } //end for
   //
-  for (int i=1) {
-  if( mouseX=x[i] && mouseX=x[i]+widthSquare );
-  }
   //
   //
   //*****put code for when a specific number button is pressed, the counter code will increase by that number*****
@@ -75,6 +72,7 @@ void mousePressed() {
   //Row 1 of buttons
   for(int i=0; i<1; i++) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1);
+    int number=1;
     //if(  ); // (Boolean i=1 && j=1;)--->   **************make code that will allow x and y values to be put into text in the TextCode tab
 } //End FOR
   //

@@ -75,7 +75,7 @@ void mousePressed() {
   //Row 1 of buttons
   for(int i=0; i<1; i++) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1);
-    buttonOne();
+    buttonOne(); //*******may need to put text code and button input code into this tab for code to work*******
     //if(  ); // (Boolean i=1 && j=1;)--->   **************make code that will allow x and y values to be put into text in the TextCode tab
 } //End FOR
   //
@@ -141,6 +141,7 @@ void keyPressed() {
   //
   if (key == '1' || key == '!') {
   println("Button #: 1"); //change if this can't be used for functionallity
+  buttonOne();
   }// end if
   //
   if (key == '2' || key == '@') {

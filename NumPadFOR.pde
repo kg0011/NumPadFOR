@@ -3,6 +3,7 @@ void setup () {
   display();
   population();
   textSetup();
+  imageCode();
 //
   one = 0;
 //
@@ -69,10 +70,12 @@ void mousePressed() {
   //
   //
   //
+  buttonInputCode();
+  //
   //Row 1 of buttons
   for(int i=0; i<1; i++) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1);
-    int number=1;
+    buttonOne();
     //if(  ); // (Boolean i=1 && j=1;)--->   **************make code that will allow x and y values to be put into text in the TextCode tab
 } //End FOR
   //

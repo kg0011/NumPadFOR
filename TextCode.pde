@@ -1,9 +1,8 @@
-String textWritten = "";  //find out how to make mouseX and mouseY write the number it's meant to be
+String textWritten = ":"; //figure out how to make button number inputs be put into text
 float titleX, titleY, titleWidth, titleHeight;
 PFont font;
 color red=#FF0000, white=#FFFFFF; //Can use multiple or different colors, needs more code if so
 int size;
-Boolean number;
 //
 void textSetup() {     //font used = Bahnschrift
   titleX = 75;
@@ -22,3 +21,12 @@ void textDraw() {
   text( textWritten, titleX, titleY, titleWidth, titleHeight );
   fill(white);
 } //end textdraw
+//
+void buttonInputCode() {
+  textDraw();
+} //end button input code
+//
+void buttonOne() {
+  int textWritten = 1;
+  println("number1input");
+  } //end button one code

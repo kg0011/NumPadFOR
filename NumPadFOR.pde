@@ -76,7 +76,7 @@ void mousePressed() {
   for(int i=0; i<1; i++) {
     for( int j=0; j<1; j++ ) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[j] && mouseY<y[j]+widthSquare ) println("Button #:", i+1, j+1);
-    for( Boolean i=1; j=1; ) {     //fix this so this works
+    for( int a=i; b=j; ) {     //could make this a true/false so numbers can be put in and so code works
     if( i>2 && j>2 ) { //*******may need to put text code and button input code into this tab for code to work*******
     buttonOne();
   } //end if

@@ -69,18 +69,26 @@ void mousePressed() {
   //*****put code for when a specific number button is pressed, the counter code will increase by that number*****
   //
   //
+  //buttonInputCode();
   //
-  buttonInputCode();
   //
   //Row 1 of buttons
   for(int i=0; i<1; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1);
-    buttonOne(); //*******may need to put text code and button input code into this tab for code to work*******
-    //if(  ); // (Boolean i=1 && j=1;)--->   **************make code that will allow x and y values to be put into text in the TextCode tab
+    for( int j=0; j<1; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[j] && mouseY<y[j]+widthSquare ) println("Button #:", i+1, j+1);
+    for( Boolean i=1; j=1; ) {     //fix this so this works
+    if( i>2 && j>2 ) { //*******may need to put text code and button input code into this tab for code to work*******
+    buttonOne();
+  } //end if
+    } //end for
+    } //end for
 } //End FOR
   //
   for(int i=1; i<2; i++) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+1);
+    if( i>3 ) {
+    buttonTwo();
+  } // end if
   } //End FOR
   //
   for(int i=2; i<3; i++) {
@@ -128,7 +136,6 @@ void mousePressed() {
   //Caution: fix for rest of buttons
   //Hint: construct all the single line IFs
   //
-  
 } //End mousepressed
 //
 void keyPressed() {
@@ -146,6 +153,7 @@ void keyPressed() {
   //
   if (key == '2' || key == '@') {
   println("Button #: 2"); //change if this can't be used for functionallity
+  buttonTwo();
   }// end if
   //
   if (key == '3' || key == '#') {

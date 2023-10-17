@@ -3,6 +3,8 @@ float titleX, titleY, titleWidth, titleHeight;
 PFont font;
 color red=#FF0000, white=#FFFFFF; //Can use multiple or different colors, needs more code if so
 int size;
+String buttonOne="1";
+String buttonTwo="2";
 //
 void textSetup() {     //font used = Bahnschrift
   titleX = 75;
@@ -22,11 +24,14 @@ void textDraw() {
   fill(white);
 } //end textdraw
 //
-void buttonInputCode() {
-  textDraw();
-} //end button input code
+//buttonInputCode() 
 //
 void buttonOne() {
-  int textWritten = 1;
+  textWritten = buttonOne;
   println("number1input");
+  } //end button one code
+  //
+void buttonTwo() {
+  textWritten = buttonTwo;
+  println("number2input");
   } //end button one code

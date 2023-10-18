@@ -3,7 +3,7 @@ float titleX, titleY, titleWidth, titleHeight;
 PFont font;
 color red=#FF0000, white=#FFFFFF; //Can use multiple or different colors, needs more code if so
 int size;
-String buttonOne="1";
+String buttonOne="1";   //figure out how to add on to numbers already put into text
 String buttonTwo="2";
 //
 void textSetup() {     //font used = Bahnschrift

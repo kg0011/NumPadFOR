@@ -1,4 +1,6 @@
 void setup () {
+  boolean a=false;
+  boolean b=false;
   size (600, 800);
   display();
   population();
@@ -76,23 +78,34 @@ void mousePressed() {
   for(int i=0; i<1; i++) {
     for( int j=0; j<1; j++ ) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[j] && mouseY<y[j]+widthSquare ) println("Button #:", i+1, j+1);
-    for( int a=i; b=j; ) {     //could make this a true/false so numbers can be put in and so code works
-    if( i>2 && j>2 ) { //*******may need to put text code and button input code into this tab for code to work*******
+    //for( boolean a=true; b=true; ) {     //could make this a true/false so numbers can be put in and so code works
+    if( i>=1 && j>=1 ) { //*******may need to put text code and button input code into this tab for code to work*******
     buttonOne();
   } //end if
-    } //end for
+    //} //end for
     } //end for
 } //End FOR
   //
   for(int i=1; i<2; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+1);
-    if( i>3 ) {
+    for( int j=1; j<1; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+1, j+1);   //******fix for not showing in println
+    //for( c=i; d=j; ) {
+      if( i>=2 && j>=1 ) {
     buttonTwo();
   } // end if
+  //} //end for
   } //End FOR
+  } //end for
   //
   for(int i=2; i<3; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-2] && mouseY<y[i-2]+widthSquare ) println("Button #:", i+1);
+    for( int j=1; j<1; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-2] && mouseY<y[i-2]+widthSquare ) println("Button #:", i+1, j+1);   //******fix for not showing in println
+    //for( e=i; f=j; ) {
+      if( i>=3 && j>=1 ) {
+      buttonThree();
+      } //end if
+    //} //end for
+    } //end for
   } //End FOR
   //
   //Row 2 of buttons

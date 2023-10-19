@@ -5,6 +5,7 @@ color red=#FF0000, white=#FFFFFF; //Can use multiple or different colors, needs 
 int size;
 String buttonOne="1";   //figure out how to add on to numbers already put into text
 String buttonTwo="2";
+String buttonThree="3";
 //
 void textSetup() {     //font used = Bahnschrift
   titleX = 75;
@@ -27,6 +28,8 @@ void textDraw() {
 //buttonInputCode() 
 //
 void buttonOne() {
+  boolean a=true;
+  boolean b=true;     //*****might need to move all of this code to main so it works*******
   textWritten = buttonOne;
   println("number1input");
   } //end button one code
@@ -35,3 +38,8 @@ void buttonTwo() {
   textWritten = buttonTwo;
   println("number2input");
   } //end button one code
+  //
+  void buttonThree() {
+  textWritten = buttonThree;
+  println("number3input");
+  } //end button three code

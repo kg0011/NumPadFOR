@@ -87,7 +87,7 @@ void mousePressed() {
 } //End FOR
   //
   for(int i=1; i<2; i++) {
-    for( int j=1; j<1; j++ ) {
+    for( int j=0; j<1; j++ ) {
     if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+1, j+1);   //******fix for not showing in println
     //for( c=i; d=j; ) {
       if( i>=2 && j>=1 ) {
@@ -98,8 +98,8 @@ void mousePressed() {
   } //end for
   //
   for(int i=2; i<3; i++) {
-    for( int j=1; j<1; j++ ) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-2] && mouseY<y[i-2]+widthSquare ) println("Button #:", i+1, j+1);   //******fix for not showing in println
+    for( int j=0; j<1; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-2] && mouseY<y[i-2]+widthSquare ) println("Button #:", i+1, j+1);
     //for( e=i; f=j; ) {
       if( i>=3 && j>=1 ) {
       buttonThree();
@@ -110,15 +110,30 @@ void mousePressed() {
   //
   //Row 2 of buttons
   for(int i=0; i<1; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+4);
+    for( int j=1; j<2; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=1 && j>=2 ) {
+      buttonFour();
+    } //end if
+    } //end for
   } //End FOR
   //
   for(int i=1; i<2; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+4);
+    for( int j=1; j<2; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=2 && j>=2 ) {
+      buttonFive();
+    } //end if
+    } //end for
   } //End FOR
   //
   for(int i=2; i<3; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+4);
+    for( int j=1; j<2; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=3 && j>=2 ) {
+      buttonSix();
+    } //end if
+    } //end for
   } //End FOR
   //
   //Row 3 of buttons

@@ -1,4 +1,4 @@
-String textWritten = ":"; //figure out how to make button number inputs be put into text
+String textWritten = ":"; //figure out how to make button number inputs be put into text, might need to move code to main tab
 float titleX, titleY, titleWidth, titleHeight;
 PFont font;
 color red=#FF0000, white=#FFFFFF; //Can use multiple or different colors, needs more code if so
@@ -6,6 +6,9 @@ int size;
 String buttonOne="1";   //figure out how to add on to numbers already put into text
 String buttonTwo="2";
 String buttonThree="3";
+String buttonFour="4";
+String buttonFive="5";
+String buttonSix="6";
 //
 void textSetup() {     //font used = Bahnschrift
   titleX = 75;
@@ -43,3 +46,18 @@ void buttonTwo() {
   textWritten = buttonThree;
   println("number3input");
   } //end button three code
+  //
+  void buttonFour() {
+  textWritten = buttonFour;
+  println("number4input");
+  } //end button four code
+  //
+  void buttonFive() {
+  textWritten = buttonFive;
+  println("number5input");
+  } //end button three code
+  //
+  void buttonSix() {
+  textWritten = buttonSix;
+  println("number6input");
+  } //end button four code

@@ -120,7 +120,7 @@ void mousePressed() {
   //
   for(int i=1; i<2; i++) {
     for( int j=1; j<2; j++ ) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+1, j+1);
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1, j+1);
     if( i>=2 && j>=2 ) {
       buttonFive();
     } //end if
@@ -129,7 +129,7 @@ void mousePressed() {
   //
   for(int i=2; i<3; i++) {
     for( int j=1; j<2; j++ ) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+1, j+1);
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i-1] && mouseY<y[i-1]+widthSquare ) println("Button #:", i+1, j+1);
     if( i>=3 && j>=2 ) {
       buttonSix();
     } //end if
@@ -138,28 +138,58 @@ void mousePressed() {
   //
   //Row 3 of buttons
   for(int i=0; i<1; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+2] && mouseY<y[i+2]+widthSquare ) println("Button #:", i+7);
+    for( int j=2; j<3; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+2] && mouseY<y[i+2]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=1 && j>=3 ) {
+      buttonSeven();
+    } //end if
+    } //end for
   } //End FOR
   //
   for(int i=1; i<2; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+7);
+    for( int j=2; j<3; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=2 && j>=3 ) {
+      buttonEight();
+    } //end if
+    } //end for
   } //End FOR
   //
   for(int i=2; i<3; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+7);
+    for( int j=2; j<3; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i] && mouseY<y[i]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=3 && j>=3 ) {
+      buttonNine();
+    } //end if
+    } //end for
   } //End FOR
   //
   //Row 4 of buttons
   for(int i=0; i<1; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+3] && mouseY<y[i+3]+widthSquare ) println("Button #:", i+10);
+    for( int j=3; j<4; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+3] && mouseY<y[i+3]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=1 && j>=4 ) {
+      buttonTen();
+    } //end if
+    } //end for
   } //End FOR
   //
   for(int i=1; i<2; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+2] && mouseY<y[i+2]+widthSquare ) println("Button #:", i+10);
+    for( int j=3; j<4; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+2] && mouseY<y[i+2]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=2 && j>=4 ) {
+      buttonEleven();
+    } //end if
+    } //end for
   } //End FOR
   //
   for(int i=2; i<3; i++) {
-    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+10);
+    for( int j=3; j<4; j++ ) {
+    if ( mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[i+1] && mouseY<y[i+1]+widthSquare ) println("Button #:", i+1, j+1);
+    if( i>=3 && j>=4 ) {
+      buttonTwelve();
+    } //end if
+    } //end for
   } //End FOR
   //Caution: fix for rest of buttons
   //Hint: construct all the single line IFs

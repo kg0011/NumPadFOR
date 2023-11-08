@@ -9,6 +9,12 @@ String buttonThree="3";
 String buttonFour="4";
 String buttonFive="5";
 String buttonSix="6";
+String buttonSeven="7";
+String buttonEight="8";
+String buttonNine="9";
+String buttonTen="10";
+String buttonEleven="11";
+String buttonTwelve="12";
 //
 void textSetup() {     //font used = Bahnschrift
   titleX = 75;
@@ -40,7 +46,7 @@ void buttonOne() {
 void buttonTwo() {
   textWritten = buttonTwo;
   println("number2input");
-  } //end button one code
+  } //end button two code
   //
   void buttonThree() {
   textWritten = buttonThree;
@@ -55,9 +61,39 @@ void buttonTwo() {
   void buttonFive() {
   textWritten = buttonFive;
   println("number5input");
-  } //end button three code
+  } //end button five code
   //
   void buttonSix() {
   textWritten = buttonSix;
   println("number6input");
-  } //end button four code
+  } //end button six code
+  //
+  void buttonSeven() {
+  textWritten = buttonSeven;
+  println("number7input");
+  } //end button seven code
+  //
+  void buttonEight() {
+  textWritten = buttonEight;
+  println("number8input");
+  } //end button eight code
+  //
+  void buttonNine() {
+  textWritten = buttonNine;
+  println("number9input");
+  } //end button nine code
+  //
+  void buttonTen() {
+  textWritten = buttonTen;
+  println("number10input");
+  } //end button ten code
+  //
+  void buttonEleven() {
+  textWritten = buttonEleven;
+  println("number11input");
+  } //end button eleven code
+  //
+  void buttonTwelve() {
+  textWritten = buttonTwelve;
+  println("number12input");
+  } //end button twelve code

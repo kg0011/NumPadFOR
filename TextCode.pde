@@ -41,71 +41,71 @@ void buttonOne() {
   boolean b=true;     //*****might need to move all of this code to main so it works*******
   textWritten = buttonOne;
   println("number1input");
-  buttonCounter = 1;
+  //buttonCounter = 1;
   } //end button one code
   //
 void buttonTwo() {
   textWritten = buttonTwo;
   println("number2input");
-  buttonCounter = 2;
+  //buttonCounter = 2;
   } //end button two code
   //
   void buttonThree() {
   textWritten = buttonThree;
   println("number3input");
-  buttonCounter = 3;
+  //buttonCounter = 3;
   } //end button three code
   //
   void buttonFour() {
   textWritten = buttonFour;
   println("number4input");
-  buttonCounter = 4;
+  //buttonCounter = 4;
   } //end button four code
   //
   void buttonFive() {
   textWritten = buttonFive;
   println("number5input");
-  buttonCounter = 5;
+  //buttonCounter = 5;
   } //end button five code
   //
   void buttonSix() {
   textWritten = buttonSix;
   println("number6input");
-  buttonCounter = 6;
+  //buttonCounter = 6;
   } //end button six code
   //
   void buttonSeven() {
   textWritten = buttonSeven;
   println("number7input");
-  buttonCounter = 7;
+  //buttonCounter = 7;
   } //end button seven code
   //
   void buttonEight() {
   textWritten = buttonEight;
   println("number8input");
-  buttonCounter = 8;
+  //buttonCounter = 8;
   } //end button eight code
   //
   void buttonNine() {
   textWritten = buttonNine;
   println("number9input");
-  buttonCounter = 9;
+  //buttonCounter = 9;
   } //end button nine code
   //
   void buttonTen() {
   textWritten = buttonTen;
   println("number10input");
-  buttonCounter = 10;
+  //buttonCounter = 10;
   } //end button ten code
   //
   void buttonEleven() {
   textWritten = buttonEleven;
   println("number11input");
-  buttonCounter = 11;
+  //buttonCounter = 11;
   } //end button eleven code
   //
   void buttonTwelve() {
   textWritten = buttonTwelve;
   println("number12input");
-  buttonCounter = 12;
+  //buttonCounter = 12;
   } //end button twelve code
